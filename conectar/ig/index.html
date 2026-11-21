@@ -1,0 +1,15 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer">
+<title>Viral Hub · conectar Instagram</title>
+<style>body{margin:0;font:17px/1.5 system-ui,sans-serif;background:#f4f5fa;color:#161a26}main{max-width:520px;margin:0 auto;padding:32px 16px;display:grid;gap:14px}
+a.b{display:block;text-align:center;font-weight:700;background:#2f56c8;color:#fff;border-radius:12px;padding:16px;text-decoration:none}p{margin:0}.m{color:#5d6478;font-size:15px}
+@media (prefers-color-scheme:dark){body{background:#0e1018;color:#e4e7f0}.m{color:#98a0b5}a.b{background:#7aa2ff;color:#0e1018}}</style></head><body><main>
+<h1 style="margin:0;font-size:24px">Conectar o Instagram</h1>
+<p id="c" class="m"></p>
+<a class="b" id="go" rel="noreferrer">entrar com o Facebook</a>
+<p class="m">Se o Facebook mostrar "bloqueado", toque nos três pontinhos ⋮ do Chrome, marque <b>Site para computador</b> e toque no botão de novo.</p>
+</main><script>
+var p=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z0-9_-]/g,"");
+document.getElementById("c").textContent=p?"Canal: "+p:"Abra pelo link que o Studio mandou.";
+document.getElementById("go").href="https://www.facebook.com/dialog/oauth?"+new URLSearchParams({client_id:"1118945387691385",redirect_uri:"https://bbananabatata-coder.github.io/conectar/",response_type:"code",display:"page",
+  scope:"instagram_basic,instagram_content_publish,instagram_manage_comments,instagram_manage_insights,pages_show_list,pages_read_engagement,business_management",state:"ig:"+p,auth_type:"rerequest"}).toString();
+</script></body></html>
