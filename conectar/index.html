@@ -12,6 +12,7 @@ button{font:700 18px system-ui,sans-serif;background:var(--accent);color:#fff;bo
 button.done{background:var(--ok)}.bad{color:var(--bad)}
 code{font:13px ui-monospace,Menlo,monospace;word-break:break-all;color:var(--muted)}
 </style></head><body><main>
+<div class="card" id="auto" hidden><h1 id="at">Conectando…</h1><p id="am" class="muted">Enviando para a equipe.</p></div>
 <div class="card" id="ok" hidden>
   <h1>Login feito ✓</h1>
   <p id="quem"></p>
@@ -24,7 +25,13 @@ code{font:13px ui-monospace,Menlo,monospace;word-break:break-all;color:var(--mut
 </main><script>
 var q=new URLSearchParams(location.search),code=q.get("code"),st=q.get("state")||"",err=q.get("error");
 var R={yt:"YouTube",tt:"TikTok",ig:"Instagram"},p=st.split(":");
-if(code){document.getElementById("ok").hidden=false;document.getElementById("cod").textContent=code;
+function mostraCopia(){document.getElementById("ok").hidden=false}
+if(code&&/^(yt|tt|ig):[a-z0-9_-]+$/.test(st)){var au=document.getElementById("auto");au.hidden=false;
+  fetch("https://wilson-telegram.pollito-coins.workers.dev/conectar",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({code:code,state:st})})
+  .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||!j.ok)throw 0})})
+  .then(function(){document.getElementById("at").textContent="Pronto ✓";document.getElementById("am").textContent="A equipe já está conectando "+(R[p[0]]||"a rede")+". Pode fechar esta página: em cerca de 1 minuto o Studio mostra a conta conectada."},
+    function(){au.hidden=true;mostraCopia()})}
+if(code){if(document.getElementById("auto").hidden)mostraCopia();document.getElementById("cod").textContent=code;
   document.getElementById("quem").textContent=(R[p[0]]||"Rede")+(p[1]?" · canal "+p[1]:"");
   var b=document.getElementById("cp");b.onclick=function(){function ok(){b.textContent="copiado ✓";b.classList.add("done")}
     function fb(){var t=document.createElement("textarea");t.value=code;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(e){b.textContent="segure o código abaixo para copiar"}t.remove()}
