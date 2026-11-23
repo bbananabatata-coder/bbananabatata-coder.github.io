@@ -29,7 +29,7 @@ function mostraCopia(){document.getElementById("ok").hidden=false}
 if(code&&/^(yt|tt|ig):[a-z0-9_-]+$/.test(st)){var au=document.getElementById("auto");au.hidden=false;
   fetch("https://wilson-telegram.pollito-coins.workers.dev/conectar",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({code:code,state:st})})
   .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||!j.ok)throw 0})})
-  .then(function(){document.getElementById("at").textContent="Pronto ✓";document.getElementById("am").textContent="A equipe já está conectando "+(R[p[0]]||"a rede")+". Pode fechar esta página: em cerca de 1 minuto o Studio mostra a conta conectada."},
+  .then(function(){var d=new Date(),h=("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2);document.getElementById("at").textContent="Recebido ✓";document.getElementById("am").textContent="A autorização do "+(R[p[0]]||"a rede")+" chegou às "+h+" e foi entregue ao Wilson, que começa a conexão agora. Costuma levar de 1 a 3 minutos. No Studio, o botão da rede fica em \"conectando…\" até aparecer conectada ✓. Se der errado, o Wilson avisa no Telegram. Pode fechar esta página."},
     function(){au.hidden=true;mostraCopia()})}
 if(code){if(document.getElementById("auto").hidden)mostraCopia();document.getElementById("cod").textContent=code;
   document.getElementById("quem").textContent=(R[p[0]]||"Rede")+(p[1]?" · canal "+p[1]:"");
