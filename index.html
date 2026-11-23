@@ -26,9 +26,9 @@ code{font:13px var(--mono)}
 <header>
   <span class="brand">Viral Hub Studio</span>
   <h1>Viral Hub Studio</h1>
-  <p class="meta">Ferramenta privada de produção de vídeos usada pelo próprio dono para gerenciar os seus canais, como o Mistério Profundo no YouTube e no TikTok. Não é oferecida a outras pessoas.</p>
+  <p class="meta">Ferramenta privada de produção de vídeos usada pelo próprio dono para gerenciar os seus canais (como o Mistério Profundo) no YouTube, no Instagram e no TikTok. Não é oferecida a outras pessoas.</p>
   <p class="meta"><b>Usa os Serviços de API do YouTube</b> · <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Termos do YouTube</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a></p>
-  <nav><a href="#privacidade">Política de Privacidade</a><a href="#termos">Termos de Serviço</a><a href="#contato">Contato</a><a href="#english">English</a></nav>
+  <nav><a href="#privacidade">Política de Privacidade</a><a href="#exclusao">Exclusão de dados</a><a href="#termos">Termos de Serviço</a><a href="#contato">Contato</a><a href="#english">English</a></nav>
 </header>
 
 <section id="privacidade">
@@ -48,8 +48,9 @@ code{font:13px var(--mono)}
   <p>O Studio usa os Serviços de API do YouTube. Ao usá-lo, valem também os <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Termos de Serviço do YouTube</a> e a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>. O uso de dados recebidos das APIs do Google segue a Política de Dados do Usuário dos Serviços de API do Google, incluindo os requisitos de uso limitado.</p>
   <h3>Como revogar o acesso</h3>
   <p>O acesso pode ser retirado a qualquer momento em <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. Ao revogar, os dados guardados no painel podem ser apagados a pedido.</p>
-  <h3>Exclusão de dados</h3>
-  <p>As estatísticas guardadas são atualizadas periodicamente e substituídas a cada atualização. Quando o acesso é revogado, ou a pedido do dono, todos os dados obtidos das APIs do YouTube são apagados em até 7 dias. Os textos de comentários ficam guardados só enquanto uma resposta está sendo preparada.</p>
+  <h3 id="exclusao">Exclusão de dados</h3>
+  <p>As estatísticas guardadas são atualizadas periodicamente e substituídas a cada atualização. Quando o acesso é revogado, ou a pedido do dono, todos os dados obtidos das APIs do YouTube, do Instagram e do TikTok são apagados em até 7 dias. Os textos de comentários ficam guardados só enquanto uma resposta está sendo preparada.</p>
+  <p><b>Como pedir a exclusão:</b> retire o acesso do app (Google: myaccount.google.com/permissions; Instagram: Configurações &gt; Apps e sites; TikTok: Configurações e privacidade &gt; Segurança &gt; Apps e serviços) ou escreva para o e-mail de suporte do app pedindo a exclusão. As chaves e os dados da conta são apagados em até 7 dias e a confirmação é enviada por e-mail.</p>
   <h3>TikTok</h3>
   <p>O dono também pode conectar a sua própria conta do TikTok (Login Kit), com a autorização dele, para:</p>
   <ul>
@@ -57,6 +58,14 @@ code{font:13px var(--mono)}
     <li>publicar na conta, pela Content Posting API (video.upload e video.publish), somente o vídeo que o dono aprovou, com a legenda, a privacidade, as interações e as declarações (conteúdo gerado por IA e conteúdo comercial) que ele escolheu na tela de postagem.</li>
   </ul>
   <p>Nenhum dado de outros usuários do TikTok é coletado. O acesso pode ser retirado a qualquer momento no app do TikTok, em Configurações e privacidade &gt; Segurança &gt; Apps e serviços. Ao revogar, ou a pedido do dono, os dados obtidos do TikTok são apagados em até 7 dias.</p>
+  <h3>Instagram (Meta)</h3>
+  <p>O dono também pode conectar as contas profissionais do Instagram dos seus canais (login do Instagram, app Viral Hub da Meta), com a autorização dele, para:</p>
+  <ul>
+    <li>mostrar no painel privado o nome de usuário e os números da conta (seguidores e quantidade de posts), com a permissão instagram_business_basic;</li>
+    <li>publicar na conta, com a permissão instagram_business_content_publish, somente o Reel que o dono aprovou, com a legenda que ele aprovou;</li>
+    <li>listar os comentários dos posts da própria conta e publicar respostas aprovadas pelo dono, com a permissão instagram_business_manage_comments.</li>
+  </ul>
+  <p>Nenhum dado de outros usuários do Instagram é coletado além dos comentários deixados nos posts da própria conta. O acesso pode ser retirado a qualquer momento no Instagram, em Configurações &gt; Apps e sites, ou nas configurações de Apps e sites da conta Meta.</p>
 </section>
 
 <section id="termos">
@@ -79,7 +88,7 @@ code{font:13px var(--mono)}
 
 <section id="english">
   <h2>Summary in English</h2>
-  <p><b>Privacy.</b> Viral Hub Studio is a private tool used only by the owner of the channels (YouTube and TikTok account @misterioprofundo.br). With the owner's authorization it reads his own account profile and statistics to show them on a private dashboard, and it publishes to his own accounts only the videos he approved, with the caption, privacy, interaction and disclosure settings he chose. On TikTok it uses Login Kit (user.info.basic, user.info.stats) and the Content Posting API (video.upload, video.publish). No data from other users is collected. Nothing is sold, shared or used for advertising. Access tokens are stored as secrets in the owner's private environment. Access can be revoked at any time (Google: myaccount.google.com/permissions; TikTok: Settings and privacy &gt; Security &gt; Apps and services), and the data obtained from these platforms is deleted within 7 days after revocation or on request.</p>
+  <p><b>Privacy.</b> Viral Hub Studio is a private tool used only by the owner of the channels (YouTube, Instagram and TikTok accounts of his own channels, such as @misterioprofundo.br). With the owner's authorization it reads his own account profile and statistics to show them on a private dashboard, and it publishes to his own accounts only the videos he approved, with the caption, privacy, interaction and disclosure settings he chose. On TikTok it uses Login Kit (user.info.basic, user.info.stats) and the Content Posting API (video.upload, video.publish). On Instagram it uses Instagram Login with instagram_business_basic (username, followers and media count for the dashboard), instagram_business_content_publish (publishing the Reels he approved) and instagram_business_manage_comments (reading comments on his own posts and posting replies he approved). No data from other users is collected. Nothing is sold, shared or used for advertising. Access tokens are stored as secrets in the owner's private environment. Access can be revoked at any time (Google: myaccount.google.com/permissions; Instagram: Settings &gt; Apps and websites; TikTok: Settings and privacy &gt; Security &gt; Apps and services), and the data obtained from these platforms is deleted within 7 days after revocation or on request. <b>Data deletion:</b> revoke the app's access or email the app's support address asking for deletion; keys and account data are deleted within 7 days and a confirmation is sent by email.</p>
   <p><b>Terms.</b> The tool is for the owner's personal use and is not offered to the public. Only accounts owned by the user can be connected; every post is approved by a person; synthetic or AI-generated content is declared when the platform asks; YouTube, Instagram and TikTok terms and guidelines apply. Provided as is, without warranties.</p>
 </section>
 </main>
